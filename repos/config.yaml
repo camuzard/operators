@@ -1,0 +1,14 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: op1-config
+  namespace: fleet-default
+spec:
+  repo: https://github.com/camuzard/operators
+  branch: master
+  targetNamespace: test
+  paths:
+  - op1
+  targets:
+  - name: dev
+    clusterGroup: op1
